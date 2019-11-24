@@ -7,9 +7,11 @@ use Illuminate\Support\Str;
 
 class Question extends Model
 {
+
+    protected $fillable = ['title', 'body'];
+    
     public function user()
     {
-    	$protected $fillable = ['title', 'body'];
 
     	return $this->belongsTo(User::class);
     }
